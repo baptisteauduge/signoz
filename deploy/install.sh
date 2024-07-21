@@ -271,15 +271,15 @@ bye() {  # Prints a friendly good bye message and exits the script.
         echo "or reach us for support in #help channel in our Slack Community https://signoz.io/slack"
         echo "++++++++++++++++++++++++++++++++++++++++"
 
-        if [[ $email == "" ]]; then
-            echo -e "\n📨 Please share your email to receive support with the installation"
-            read -rp 'Email: ' email
+        #if [[ $email == "" ]]; then
+        #    echo -e "\n📨 Please share your email to receive support with the installation"
+        #    read -rp 'Email: ' email
 
-            while [[ $email == "" ]]
-            do
-                read -rp 'Email: ' email
-            done
-        fi
+        #    while [[ $email == "" ]]
+        #    do
+        #        read -rp 'Email: ' email
+        #    done
+        #fi
 
         send_event "installation_support"
 
@@ -539,21 +539,21 @@ else
 
     echo "ℹ️  To bring down SigNoz and clean volumes : $sudo_cmd docker-compose -f ./docker/clickhouse-setup/docker-compose.yaml down -v"
 
-    echo ""
-    echo "+++++++++++++++++++++++++++++++++++++++++++++++++"
-    echo ""
-    echo "👉 Need help in Getting Started?"
-    echo -e "Join us on Slack https://signoz.io/slack"
-    echo ""
-    echo -e "\n📨 Please share your email to receive support & updates about SigNoz!"
-    read -rp 'Email: ' email
+    #echo ""
+    #echo "+++++++++++++++++++++++++++++++++++++++++++++++++"
+    #echo ""
+    #echo "👉 Need help in Getting Started?"
+    #echo -e "Join us on Slack https://signoz.io/slack"
+    #echo ""
+    #echo -e "\n📨 Please share your email to receive support & updates about SigNoz!"
+    #read -rp 'Email: ' email
 
-    while [[ $email == "" ]]
-    do
-        read -rp 'Email: ' email
-    done
+    #while [[ $email == "" ]]
+    #do
+    #    read -rp 'Email: ' email
+    #done
     
-    send_event "identify_successful_installation"
+    #send_event "identify_successful_installation"
 fi
 
 echo -e "\n🙏 Thank you!\n"
